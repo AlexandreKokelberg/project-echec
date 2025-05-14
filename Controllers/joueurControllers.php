@@ -24,7 +24,7 @@ if ($uri === "/connexion") {
 } elseif ($uri === "/inscription") {
     if(isset($_POST['btnEnvoi'])) {
         $messageError = verifyEmptyData();
-        if(!messageError) {
+        if(!$messageError) {
             createUser($pdo);
             header('location:/connexion');
        }

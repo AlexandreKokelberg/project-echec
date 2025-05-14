@@ -13,3 +13,16 @@ function selectAllTournois($pdo)
         die($message);
     }
 }
+function selectAllPlayers($pdo) 
+{
+    try {
+        $query = 'select * from joueurs;';
+        $selectPlayers = $pdo->prepare($query);
+        $selectPlayers->execute();
+        $players = $selectPlayers->fetchAll();
+        return $players;
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}
