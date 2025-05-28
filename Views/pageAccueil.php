@@ -9,7 +9,7 @@
                 <div class="center">
                     <p><span><?=$tournoi->TournoisRegles ?></span>
                     <h3><?=$tournoi->TournoisGagnantPremier?><h3></p>
-                    <a href="voirTournois.php" class="btn btn-page">Voir Plus</a>
+                    <a href="voirTournois" class="btn btn-page">Voir Plus</a>
                 </div>
             </div>
         </div>

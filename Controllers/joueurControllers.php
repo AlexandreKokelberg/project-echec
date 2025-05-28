@@ -49,6 +49,9 @@ if ($uri === "/connexion") {
     $title = "Mise à jour du profil";
     $template = "Views/Joueurs/inscriptionOrEditProfile.php";
     require_once("Views/base.php");
+} elseif ($uri === "/deleteProfil") {
+    deleteUser($pdo);
+    header("location:/deconnexion");
 }
 function verifyEmptyData()
 {
