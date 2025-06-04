@@ -26,3 +26,18 @@ function selectAllPlayers($pdo)
         die($message);
     }
 }
+function selectOneTournoi($pdo)
+{
+    try {
+        $query = 'select * from tournois where TournoisID = :TournoisID';
+        $selectTournois = $pdo->prepare($query);
+        $selectTournois->execute([
+            'TournoisID' => $_GET["TournoisID"]
+        ]);
+        $tournois = $selectTournois->fetch();
+        return $tournois;
+    } catch (PDOExeeption $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}

@@ -14,9 +14,5 @@
                 <button name="btnEnvoi" class="button">Envoi</button>
             </div>
         </fieldset>
-        <div>
-            <h4 class="text-danger">Pas encore inscrit ?</h4>
-            <a href="inscriptionOrEditProfil.php" class="button-secondaire">Cliquez ici !</a>
-        </div>
     </form>
 </div>
